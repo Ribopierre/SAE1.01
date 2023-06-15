@@ -1,0 +1,41 @@
+programme puissance IV c'est
+fonction tableau (entF/sortF tab); // sert a creer le tableau a chaque tour 
+fonction round (entF f_nom1, entF f_nom2); // sert a donner et régler tout les 
+                                           // parametre et la création de l'affichage 
+                                           // qui se génère a chaque round
+fonction regle (); // sert a afficher les regles sans auncune entrée ni sortie
+fonction finpartie(); // sert a afficher 
+constante LOGO1=X; // En mettant les 2 signes en constante,
+                   // les joueurs peuvent les modifier très simplement 
+constante LOGO2=O;
+début
+    res : booléen //les joueurs connaissent ou ne conaissent pas les règles,
+                  // il y a donc que 2 issue d'ou l'interêt d'un booléen
+    nom1, nom2 ,gagnant : chaine(20); // 
+    tour : entier;
+    ecrireEcran(“Puissance IV”);
+    ecrireEcran(“Si vous connaissez les règles tapez 1 sinon tapez 0.”);
+    lireClavier(“booleen”);
+    si(res==0) alors // sert a montré les eègle
+        regle ();
+    finsi
+    ecrireEcran(”Entrez le nom du joueur 1 :”);
+    lireClavier(nom1);
+    ecrireEcran(“Joueur 1 :”, nom1);
+    ecrireEcran(“Entrez le nom du joueur 2 :”);
+    lireClavier(nom2);
+    ecrireEcran(“Joueur 2 :”, nom2);
+    ecrireEcran(“Signe”, nom1” : X”); // montre le signe en fonction du joueur 
+    ecrireEcran(“Signe”, nom2” : O”);
+    ecrireEcran(“La partie va commencer”);
+    round (entE nom1, entE nom2); // c'est ici que tout l'affichage et le 
+                                  // parametrage de chaque round va se passe en 
+                                  // utilisant les autres fonction tableau  et finparti. 
+                                  // ELle regroupe donc tout les rest du programme qui 
+                                  // est évolutif en fonction des événements
+    ecrireEcran(gagnant,"a gagné la partie bien joué à lui");
+    ecrireEcran("Si vous voulez rejoué ré-executer le programme");
+fin
+
+
+

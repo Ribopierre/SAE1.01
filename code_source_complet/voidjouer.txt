@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void jouer (t_grille tab, char let, int val){
+    bool res;
+    
+    if (tab[i]=VIDE)
+}
